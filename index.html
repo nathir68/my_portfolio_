@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thasin Nathir M | Full-Stack & AI Engineer Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Thasin Nathir M, a student developer specializing in Full-Stack web development and Artificial Intelligence. Explore my projects, skills, and get in touch.">
+    <meta name="keywords" content="Thasin Nathir, Portfolio, Full-Stack Developer, AI Engineer, Python, Django, Flask, TensorFlow, Web Developer">
+    <meta name="author" content="Thasin Nathir M">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Thasin Nathir M | Full-Stack & AI Engineer">
+    <meta property="og:description" content="Explore the portfolio of Thasin Nathir M, a student developer passionate about full-stack apps and machine learning.">
+    <meta property="og:image" content="profile.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts: Outfit (headings) & Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient Background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-accent">&lt;</span>TN<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://github.com/nathir68" target="_blank" rel="noopener noreferrer" class="btn btn-outline nav-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content fade-in-up">
+                    <div class="badge">
+                        <span class="badge-dot"></span> Open to Collaboration & Learning
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Thasin Nathir M</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Full-Stack Developer & AI Engineer</h2>
+                    <p class="hero-description">
+                        I am a student developer driven by the excitement of building new projects, integrating robust backends, and exploring artificial intelligence solutions.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper fade-in-up">
+                    <div class="image-card">
+                        <div class="image-inner">
+                            <img src="profile.png" alt="Thasin Nathir M" class="profile-img">
+                        </div>
+                        <div class="glowing-border"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down" aria-label="Scroll to about section">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="arrow"></span>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-underline"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-info card glass">
+                        <h3 class="card-title">My Journey</h3>
+                        <p>
+                            I am a student pursuing my technical education with a deep interest in software engineering and artificial intelligence. My coding journey is fueled by a passion for transforming complex logic into simple, intuitive web applications and exploring modern machine learning capabilities.
+                        </p>
+                        <p>
+                            Whether building robust servers, designing database schemas, or writing neural networks, I enjoy solving problems at every layer of the technology stack.
+                        </p>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Projects Built</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">4+</span>
+                                <span class="stat-label">Backend Frameworks</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">2+</span>
+                                <span class="stat-label">AI Tools Tested</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-highlights card glass">
+                        <h3 class="card-title">Key Pillars</h3>
+                        <ul class="highlights-list">
+                            <li>
+                                <div class="highlight-icon"><i class="fas fa-cubes"></i></div>
+                                <div class="highlight-text">
+                                    <h4>Full-Stack Mastery</h4>
+                                    <p>Connecting fast frontends with secure Python-based backend architectures.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="highlight-icon"><i class="fas fa-brain"></i></div>
+                                <div class="highlight-text">
+                                    <h4>AI Integration</h4>
+                                    <p>Applying models using TensorFlow and implementing smart APIs to build intelligent web apps.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="highlight-icon"><i class="fas fa-terminal"></i></div>
+                                <div class="highlight-text">
+                                    <h4>Agile Exploration</h4>
+                                    <p>Constantly learning new languages, tooling libraries, and cloud deployment targets.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">My Toolbox</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Frontend -->
+                    <div class="skill-category card glass">
+                        <div class="skill-icon-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Frontend</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="skill-badge">HTML5</span></li>
+                            <li><span class="skill-badge">CSS3 / Flexbox</span></li>
+                            <li><span class="skill-badge">JavaScript (ES6+)</span></li>
+                            <li><span class="skill-badge">Responsive Design</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="skill-category card glass">
+                        <div class="skill-icon-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Backend</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="skill-badge">Python</span></li>
+                            <li><span class="skill-badge">Django</span></li>
+                            <li><span class="skill-badge">Flask</span></li>
+                            <li><span class="skill-badge">SQL</span></li>
+                            <li><span class="skill-badge">MySQL</span></li>
+                            <li><span class="skill-badge">MongoDB</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- AI/ML -->
+                    <div class="skill-category card glass">
+                        <div class="skill-icon-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>AI / ML</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="skill-badge">TensorFlow</span></li>
+                            <li><span class="skill-badge">OpenAI API</span></li>
+                            <li><span class="skill-badge">Model Integration</span></li>
+                            <li><span class="skill-badge">Data Analysis</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-category card glass">
+                        <div class="skill-icon-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Tools & Platforms</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span class="skill-badge">Git & GitHub</span></li>
+                            <li><span class="skill-badge">Vercel Deployment</span></li>
+                            <li><span class="skill-badge">VS Code</span></li>
+                            <li><span class="skill-badge">Command Line</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Showcase Projects</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <!-- Project Filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="ai-ml">AI & ML</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card card glass" data-category="ai-ml">
+                        <div class="project-image">
+                            <div class="project-placeholder-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <span class="project-tag">AI & ML</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Smart Brain Conversational Assistant</h3>
+                            <p class="project-desc">
+                                A multi-provider AI conversational assistant capable of document parsing and context-aware chat. Dynamically routes queries to Gemini, OpenRouter, or OpenAI. Supports PDF/DOCX summarization and brainstorming tasks.
+                            </p>
+                            <div class="project-tech">
+                                <span>Gemini API</span>
+                                <span>OpenRouter</span>
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>Vercel</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nathir68/smartbrainchatbot" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub repository">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="https://smart-brain-mu.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live demo">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card card glass" data-category="fullstack">
+                        <div class="project-image">
+                            <div class="project-placeholder-icon">
+                                <i class="fas fa-folder-open"></i>
+                            </div>
+                            <span class="project-tag">Full-Stack</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project Board Task Manager</h3>
+                            <p class="project-desc">
+                                A kanban-style project board that helps developers track issues and manage project workflows. Backed by user authentication and real-time state persistence.
+                            </p>
+                            <div class="project-tech">
+                                <span>Django</span>
+                                <span>Python</span>
+                                <span>MySQL</span>
+                                <span>HTML/CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nathir68" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub repository">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live demo">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: RESLYZER -->
+                    <article class="project-card card glass" data-category="ai-ml">
+                        <div class="project-image">
+                            <div class="project-placeholder-icon">
+                                <i class="fas fa-file-invoice"></i>
+                            </div>
+                            <span class="project-tag">AI & ML</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">RESLYZER AI Resume Analyzer</h3>
+                            <p class="project-desc">
+                                An ML-powered resume parser and job recommendation platform. Extracts text from PDF/Word resumes, uses spaCy NLP to identify skills, and applies TF-IDF cosine similarity to recommend matching career roles.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>spaCy NLP</span>
+                                <span>Scikit-Learn</span>
+                                <span>Vercel</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nathir68/RESLYZER" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub repository">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="https://resumeanalyzerandjobrecommender.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live demo">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Simple Calculator -->
+                    <article class="project-card card glass" data-category="frontend">
+                        <div class="project-image">
+                            <img src="calculator.png" alt="Simple Calculator Preview" class="project-img">
+                            <span class="project-tag">Frontend</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Glassmorphic Simple Calculator</h3>
+                            <p class="project-desc">
+                                A sleek, modern front-end calculator application featuring soft glassmorphic UI cards, real-time input history display, error handling, and keypress integration.
+                            </p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/nathir68/calc" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub repository">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="https://calc-zeta-coral.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live demo">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Details -->
+                    <div class="contact-info card glass">
+                        <h3 class="card-title">Let's Connect</h3>
+                        <p>
+                            I'm currently looking for new learning paths, internship opportunities, or interesting projects to collaborate on. Drop me a line!
+                        </p>
+                        
+                        <ul class="contact-links-list">
+                            <li>
+                                <a href="mailto:NATHIRVKP@GMAIL.COM">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>NATHIRVKP@GMAIL.COM</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+916381715581">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <span>+91 6381715581</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/nathir68" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                    <span>github.com/nathir68</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/thasin-nathir-m?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn Profile</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-card card glass">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" required placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" required placeholder="your.email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit">
+                                Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+                            </button>
+                            <p class="form-status" id="form-status"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#" class="nav-logo">
+                <span class="logo-accent">&lt;</span>TN<span class="logo-accent"> /&gt;</span>
+            </a>
+            <p>&copy; 2026 Thasin Nathir M. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/nathir68" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/thasin-nathir-m?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:NATHIRVKP@GMAIL.COM" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
