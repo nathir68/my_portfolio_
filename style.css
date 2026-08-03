@@ -71,6 +71,16 @@ body {
     position: relative;
 }
 
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -449,75 +459,101 @@ img {
     gap: 16px;
 }
 
-/* Floating Image Card Style */
+/* Interactive 3D Parallax Tilt Photo Card */
 .hero-image-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.image-card {
+.tilt-card-container {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.tilt-card {
     position: relative;
     width: 320px;
     height: 420px;
+    transform-style: preserve-3d;
     border-radius: var(--radius-lg);
-    z-index: 1;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: transform 0.1s ease-out, box-shadow 0.3s ease;
     cursor: pointer;
-}
-
-.image-inner {
-    width: 100%;
-    height: 100%;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    position: relative;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    transition: var(--transition-normal);
     background: var(--bg-surface);
 }
 
-.profile-img {
+.tilt-card:hover {
+    box-shadow: 0 25px 50px rgba(0, 242, 254, 0.15);
+}
+
+.tilt-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: var(--transition-slow);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(196, 113, 237, 0.08) 0%, rgba(0, 242, 254, 0.05) 100%);
+    border: 1px solid var(--border-color);
+    transform: translateZ(-10px);
+    pointer-events: none;
 }
 
-/* Glow Border Behind Image Card */
-.glowing-border {
+.tilt-card-photo {
     position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    background: var(--gradient-vibrant);
-    border-radius: calc(var(--radius-lg) + 4px);
-    z-index: -1;
-    filter: blur(10px);
-    opacity: 0.4;
-    transition: var(--transition-normal);
-    animation: breathingGlow 6s ease-in-out infinite alternate;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: calc(var(--radius-lg) - 6px);
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(20px);
+    pointer-events: none;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-@keyframes breathingGlow {
-    0% { filter: blur(8px); opacity: 0.3; }
-    100% { filter: blur(15px); opacity: 0.6; }
+.tilt-card-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--accent-cyan);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+    transform: translateZ(40px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* Image Card Hover Animations */
-.image-card:hover .image-inner {
-    transform: translateY(-8px) rotate(1deg);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-    border-color: rgba(255, 255, 255, 0.15);
+.tilt-card:hover .tilt-card-border {
+    opacity: 0.85;
 }
 
-.image-card:hover .glowing-border {
-    opacity: 0.8;
-    filter: blur(18px);
+.tilt-card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 50%);
+    border-radius: var(--radius-lg);
+    pointer-events: none;
+    transform: translateZ(30px);
+    mix-blend-mode: overlay;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.image-card:hover .profile-img {
-    transform: scale(1.05);
+.tilt-card:hover .tilt-card-glow {
+    opacity: 1;
 }
 
 /* Scroll Down Indicator */
@@ -1174,9 +1210,9 @@ img {
         justify-content: center;
     }
     
-    .image-card {
+    .tilt-card {
         width: 280px;
-        height: 360px;
+        height: 370px;
     }
     
     .contact-grid {

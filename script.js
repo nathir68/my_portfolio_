@@ -94,25 +94,38 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ==========================================================================
        PROFILE CARD 3D TILT EFFECT
        ========================================================================== */
-    const imageCard = document.querySelector('.image-card');
+    const imageCard = document.getElementById('profile-tilt-card');
     
     if (imageCard) {
         imageCard.addEventListener('mousemove', (e) => {
             const cardRect = imageCard.getBoundingClientRect();
             
-            // Mouse position relative to the card center
-            const x = e.clientX - cardRect.left - cardRect.width / 2;
-            const y = e.clientY - cardRect.top - cardRect.height / 2;
+            // Mouse position relative to the card top-left
+            const x = e.clientX - cardRect.left;
+            const y = e.clientY - cardRect.top;
             
-            // Normalize inputs
-            const rotateX = -(y / (cardRect.height / 2)) * 12; // max 12deg
-            const rotateY = (x / (cardRect.width / 2)) * 12; // max 12deg
+            // Normalized percentages (0 to 1)
+            const px = x / cardRect.width;
+            const py = y / cardRect.height;
             
-            imageCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            // Centered percentages (-0.5 to 0.5)
+            const cx = px - 0.5;
+            const cy = py - 0.5;
+            
+            // Calculate rotation angles
+            const rotateX = cy * -15; // pitch
+            const rotateY = cx * 15;  // yaw
+            
+            // Apply coordinates as CSS variables for highlight reflections
+            imageCard.style.setProperty('--glow-x', `${px * 100}%`);
+            imageCard.style.setProperty('--glow-y', `${py * 100}%`);
+            
+            // Apply rotation in 3D perspective space
+            imageCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
         });
 
         imageCard.addEventListener('mouseleave', () => {
-            imageCard.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            imageCard.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
         });
     }
 
