@@ -30,6 +30,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Intro 3D Business Card Overlay -->
+    <div id="card-overlay" class="card-overlay">
+        <div class="card-scene">
+            <div class="intro-card" id="intro-card">
+                <!-- Decorative Red Lines Top Left -->
+                <div class="card-lines-tl"></div>
+                
+                <!-- Watermark Background Logo -->
+                <div class="card-watermark">TN</div>
+                
+                <!-- Decorative Shapes Bottom Left -->
+                <div class="card-decor-bl">
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                </div>
+
+                <!-- Left Content: Profile Info -->
+                <div class="card-left">
+                    <h1 class="card-name">THASIN NATHIR</h1>
+                    <div class="card-motto">FOCUS &bull; GROW &bull; IMPACT</div>
+                    
+                    <div class="card-details-container">
+                        <div class="card-vertical-line"></div>
+                        <ul class="card-details">
+                            <li>
+                                <span class="card-icon-wrapper"><i class="fas fa-phone-alt"></i></span>
+                                <span>+91 63817 15581</span>
+                            </li>
+                            <li>
+                                <span class="card-icon-wrapper"><i class="fas fa-envelope"></i></span>
+                                <span>nathirvkp@gmail.com</span>
+                            </li>
+                            <li>
+                                <span class="card-icon-wrapper"><i class="fas fa-map-marker-alt"></i></span>
+                                <span>Chennai, Tamil Nadu, India</span>
+                            </li>
+                            <li>
+                                <span class="card-icon-wrapper"><i class="fab fa-linkedin-in"></i></span>
+                                <span>linkedin.com/in/thasin-nathir-m</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Content: Portrait Clip -->
+                <div class="card-right">
+                    <div class="card-polygon-bg"></div>
+                    <div class="card-photo-container">
+                        <img src="profile_sunglasses_blue.png" alt="Thasin Nathir" class="card-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="skip-card-btn" class="skip-card-btn">
+            Skip Intro <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
     <!-- Background Canvas for Three.js -->
     <canvas id="bg-canvas"></canvas>
 
@@ -93,7 +152,7 @@
                         <div class="tilt-card" id="profile-tilt-card">
                             <div class="tilt-card-bg"></div>
                             <div class="tilt-card-glow"></div>
-                            <div class="tilt-card-photo" style="background-image: url('profile.png');"></div>
+                            <div class="tilt-card-photo" style="background-image: url('profile.png?v=2');"></div>
                             <div class="tilt-card-border"></div>
                         </div>
                     </div>

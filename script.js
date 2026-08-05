@@ -1,6 +1,78 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ==========================================================================
+       3D BUSINESS CARD INTRO OVERLAY & TIMING
+       ========================================================================== */
+    const cardOverlay = document.getElementById('card-overlay');
+    const introCard = document.getElementById('intro-card');
+    const skipCardBtn = document.getElementById('skip-card-btn');
+
+    let introTimeout;
+    let fadeOutTimeout;
+    let isIntroFinished = false;
+
+    function finishIntro() {
+        if (isIntroFinished) return;
+        isIntroFinished = true;
+
+        // Clear any pending timeouts
+        clearTimeout(introTimeout);
+        clearTimeout(fadeOutTimeout);
+
+        // Stage 1: Card flies off-screen
+        if (introCard) {
+            introCard.classList.add('vanish');
+        }
+
+        // Stage 2: Overlay fades out and hides
+        fadeOutTimeout = setTimeout(() => {
+            if (cardOverlay) {
+                cardOverlay.classList.add('fade-out');
+            }
+            // Enable scrolling on body once intro is done
+            document.body.style.overflowY = '';
+        }, 600);
+    }
+
+    // Lock scrolling on page load while intro runs
+    document.body.style.overflowY = 'hidden';
+
+    // Auto-vanish after 3 seconds
+    introTimeout = setTimeout(finishIntro, 3000);
+
+    // Skip Button Event
+    if (skipCardBtn) {
+        skipCardBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            finishIntro();
+        });
+    }
+
+    // 3D Parallax Tilt Effect on Intro Card
+    if (cardOverlay && introCard) {
+        cardOverlay.addEventListener('mousemove', (e) => {
+            if (isIntroFinished) return;
+
+            const overlayRect = cardOverlay.getBoundingClientRect();
+            // Mouse position relative to the viewport center
+            const x = e.clientX - overlayRect.left - overlayRect.width / 2;
+            const y = e.clientY - overlayRect.top - overlayRect.height / 2;
+
+            // Calculate tilt degrees (subtle rotation)
+            const rotateX = -(y / (overlayRect.height / 2)) * 15; // max 15deg
+            const rotateY = (x / (overlayRect.width / 2)) * 15; // max 15deg
+
+            // Apply transform
+            introCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        cardOverlay.addEventListener('mouseleave', () => {
+            if (isIntroFinished) return;
+            introCard.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        });
+    }
+
+    /* ==========================================================================
        STICKY NAVBAR & MOBILE MENU TOGGLE
        ========================================================================== */
     const navbar = document.getElementById('navbar');
