@@ -1264,6 +1264,9 @@ img {
     position: relative;
     width: 660px;
     height: 375px;
+    min-width: 660px;
+    min-height: 375px;
+    flex-shrink: 0;
     background: linear-gradient(135deg, #030814 0%, #0a1730 45%, #02050b 100%);
     border-radius: 16px;
     border: 1px solid rgba(0, 242, 254, 0.2);
